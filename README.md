@@ -13,5 +13,26 @@ to make reasonable decisions which then enable us to tell compelling stories aro
 ### Data Source
 
 ```
-The primary source of Data used here is Data Sale.csv and this is an open source data that can be freely downloaded from an open source online such as kaggle or FRED or any other repository site.
+The primary source of Data used here is Data Sale.csv and this is an open source data that can be freely downloaded from an open source online such as Capstone or FRED or kaggle or any other repository site.
 ```
+
+### Tools Used
+
+```
+- Microsoft Excel 
+    1. For Data Cleaning [Download Here](https://www.microsoft.com)
+    2. For Data Analysis
+    3. For Data Visualization
+       
+- SQL - Structured Query language for Quering of Data
+- Microsft Power Bi Desktop
+- GitHub for Portifolio Building
+```
+
+### Data Cleaning and Preparations
+
+```
+In the initial phase of the data cleaning and preparations, we perform the following actions;
+1. Data Loading and Inspection
+2. Handling missing variables
+3. Data cleaning and formatting
