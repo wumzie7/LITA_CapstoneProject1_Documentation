@@ -1,6 +1,6 @@
 # LITA_CapstoneProject_Documentation
 
-### Sales Performance Analysis for a Retail Store 
+### Project Title: Sales Performance Analysis for a Retail Store 
 
 ### Project Overview
 
@@ -114,10 +114,8 @@ WHERE Product NOT IN (SELECT Product FROM [dbo].[LITASalesData]
 ### Data Visualization 
 
 ```Img
-In this I visualizes
 
 ![SalesData](https://github.com/user-attachments/assets/8dc0c8aa-0e24-46fd-95a9-25184b1bbf2a)
 
  ```
-![Sales1](https://github.com/user-attachments/assets/3dc5c734-4eb7-4965-966e-a0efd56c263e)
 
