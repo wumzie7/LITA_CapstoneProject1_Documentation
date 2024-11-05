@@ -6,7 +6,7 @@
 
 ```
 This project is tasked with analyzing the sales performance of a retail store.
-The Data Analysis of this project aims to explore sales data to uncover key insights such as top-selling products, regional performance, and monthly sales trends. The goal is to produce an interactive Power BI dashboard that highlights these findings.
+The Data Analysis of this project aims to explore sales data to uncover key insights such as top-selling products, regional performance, and monthly sales trends to produce an interactive Power BI dashboard that highlights these findings and
 to make reasonable decisions which then enable us to tell compelling stories around our data from the insight gotten and to know the best performance from our data.
 ```
 
@@ -53,48 +53,49 @@ EDA involved the exploring of the Data to answer some questions about the Data s
 - What is the total units of products sold?
 ```
 
-This is where we include some basic lines of code or queries or even som of the DAX expressions used during analysis;
+This is where we include some basic lines of code or queries during analysis;
 
   ```SQL
 create DATABASE LITAPROJECT; 
 SELECT * FROM [dbo].[LITASalesData]
 
---- 1. retrieve the total sales for each product category ---
+--- The total sales for each product category ---
 SELECT Product, SUM(totalsales) AS ProductTotalSales
 FROM [dbo].[LITASalesData]
 GROUP BY Product
 ORDER BY ProductTotalSales 
 
---- 2. find the number of sales transactions in each region ---
+--- The number of sales transactions in each region ---
 SELECT Region, SUM (TotalSales) AS SalesTransaction 
 FROM [dbo].[LITASalesData] GROUP BY Region
 ORDER BY SalesTransaction 
 
---- 3. find the highest-selling product by total sales value--
+--- The highest-selling product by total sales value--
 SELECT TOP(1) Product, MAX(totalsales) AS TotalProductSold,
 sum(totalsales) AS  TotalHighestSellingProduct
 FROM [dbo].[LITASalesData]
 GROUP BY Product 
 ORDER BY TotalProductSold DESC
 
---- 4. calculate total revenue per product---
+---  Total revenue per product---
 SELECT Product, sum(totalsales) AS TotalRevenue FROM [dbo].[LITASalesData]
 GROUP BY Product 
 ORDER BY TotalRevenue 
 
---- 5. calculate monthly sales totals for the current year ----
+---  Monthly sales totals for the current year ----
 SELECT YEAR(OrderDate) AS CurrentYear, MONTH(OrderDate) AS MonthlySales, 
 SUM(totalsales) AS Monthly_Sales_Total
 FROM [dbo].[LITASalesData]
 GROUP BY YEAR(OrderDate), MONTH(OrderDate)
 ORDER BY YEAR(OrderDate) DESC;
---- 6. find the top 5 customers by total purchase amount ---
+
+--- 6. The top 5 customers by total purchase amount ---
 SELECT TOP (5) CustomerId, SUM(totalsales) AS TotalPurchase 
 FROM [dbo].[LITASalesData]
 GROUP BY CustomerId
 ORDER BY TotalPurchase
 
- --- 7. calculate the percentage of total sales contributed by each region ---
+ --- Percentage of total sales contributed by each region ---
 WITH RegionSales AS
 SELECT Region, SUM(Quantity * UnitPrice) AS TotalSales FROM [dbo].[LITASalesData]
 GROUP BY Region),
@@ -104,7 +105,7 @@ SELECT RS.Region, RS.TotalSales,
 (RS.TotalSales * 100.0/TS.GrandTotal) AS SalesPercentage
 FROM RegionSales RS, TotalSales TS;
 
---- 8. identify products with no sales in the last quarter---
+--- Products with no sales in the last quarter---
 SELECT DISTINCT Product FROM [dbo].[LITASalesData]
 WHERE Product NOT IN (SELECT Product FROM [dbo].[LITASalesData]
   WHERE OrderDate >= DATEADD(QUARTER, -1, GETDATE())
