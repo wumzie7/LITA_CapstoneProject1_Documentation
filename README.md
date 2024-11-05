@@ -43,8 +43,6 @@ In the initial phase of the data cleaning and preparations, I perform the follow
 
 ```
 EDA involved the exploring of the Data to answer some questions about the Data such as;
-- What is the overall sales trend?
-- Which product are top sellers?
 - What is the total sales by product?
 - What is the total sales by region?
 - What is the total sales by month?
@@ -52,7 +50,7 @@ EDA involved the exploring of the Data to answer some questions about the Data s
 - What is the total revenue by region?
 - What is the total units of products sold?
 ```
-
+### Data Analysis
 This is where we include some basic lines of code or queries during analysis;
 
   ```SQL
@@ -113,3 +111,6 @@ WHERE Product NOT IN (SELECT Product FROM [dbo].[LITASalesData]
 
   ```
 
+### Data Visualization 
+
+```
