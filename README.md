@@ -56,59 +56,59 @@ EDA involved the exploring of the Data to answer some questions about the Data s
 This is where we include some basic lines of code or queries or even som of the DAX expressions used during analysis;
 
   ```SQL
-  Create database LITAPROJECT; 
-select * from [dbo].[LITASalesData]
+create DATABASE LITAPROJECT; 
+SELECT * FROM [dbo].[LITASalesData]
 
 --- 1. retrieve the total sales for each product category ---
-select Product, sum(totalsales) as ProductTotalSales
-from [dbo].[LITASalesData]
-group by Product
-order by ProductTotalSales 
+SELECT Product, SUM(totalsales) AS ProductTotalSales
+FROM [dbo].[LITASalesData]
+GROUP BY Product
+ORDER BY ProductTotalSales 
 
 --- 2. find the number of sales transactions in each region ---
-select Region, sum (TotalSales) as SalesTransaction 
-from  [dbo].[LITASalesData]group by Region
-order by SalesTransaction 
+SELECT Region, SUM (TotalSales) AS SalesTransaction 
+FROM [dbo].[LITASalesData] GROUP BY Region
+ORDER BY SalesTransaction 
 
 --- 3. find the highest-selling product by total sales value--
-select top(1) Product, max(totalsales) as TotalProductSold,
-sum(totalsales) as  TotalHighestSellingProduct
-from [dbo].[LITASalesData]
-group by Product 
-order by TotalProductSold desc
+SELECT TOP(1) Product, MAX(totalsales) AS TotalProductSold,
+sum(totalsales) AS  TotalHighestSellingProduct
+FROM [dbo].[LITASalesData]
+GROUP BY Product 
+ORDER BY TotalProductSold DESC
 
 --- 4. calculate total revenue per product---
-select Product, sum(totalsales) as TotalRevenue from [dbo].[LITASalesData]
-group by Product 
-order by TotalRevenue 
+SELECT Product, sum(totalsales) AS TotalRevenue FROM [dbo].[LITASalesData]
+GROUP BY Product 
+ORDER BY TotalRevenue 
 
 --- 5. calculate monthly sales totals for the current year ----
-select Year(OrderDate) As CurrentYear, Month(OrderDate) As MonthlySales, 
-Sum(totalsales) As Monthly_Sales_Total
-From [dbo].[LITASalesData]
-Group by Year(OrderDate), Month(OrderDate)
-order by Year(OrderDate) desc;
-
+SELECT YEAR(OrderDate) AS CurrentYear, MONTH(OrderDate) AS MonthlySales, 
+SUM(totalsales) AS Monthly_Sales_Total
+FROM [dbo].[LITASalesData]
+GROUP BY YEAR(OrderDate), MONTH(OrderDate)
+ORDER BY YEAR(OrderDate) DESC;
 --- 6. find the top 5 customers by total purchase amount ---
-select top (5) CustomerId, sum(totalsales) As TotalPurchase 
-from [dbo].[LITASalesData]
-Group by CustomerId
-order by TotalPurchase
+SELECT TOP (5) CustomerId, SUM(totalsales) AS TotalPurchase 
+FROM [dbo].[LITASalesData]
+GROUP BY CustomerId
+ORDER BY TotalPurchase
 
  --- 7. calculate the percentage of total sales contributed by each region ---
-with RegionSales as 
-select Region, sum(Quantity * UnitPrice) as TotalSales from [dbo].[LITASalesData]
-group by Region),
-TotalSales as (
-select sum(TotalSales) as GrandTotal from RegionSales)
-select RS.Region, RS.TotalSales,
-(RS.TotalSales * 100.0/TS.GrandTotal) as SalesPercentage
-from RegionSales RS, TotalSales TS;
+WITH RegionSales AS
+SELECT Region, SUM(Quantity * UnitPrice) AS TotalSales FROM [dbo].[LITASalesData]
+GROUP BY Region),
+TotalSales AS (
+SELECT SUM(TotalSales) AS GrandTotal FROM RegionSales)
+SELECT RS.Region, RS.TotalSales,
+(RS.TotalSales * 100.0/TS.GrandTotal) AS SalesPercentage
+FROM RegionSales RS, TotalSales TS;
 
 --- 8. identify products with no sales in the last quarter---
-select distinct Product from [dbo].[LITASalesData]
-where Product not in (select Product from [dbo].[LITASalesData]
-  where OrderDate >= dateadd(quarter, -1, getdate())
+SELECT DISTINCT Product FROM [dbo].[LITASalesData]
+WHERE Product NOT IN (SELECT Product FROM [dbo].[LITASalesData]
+  WHERE OrderDate >= DATEADD(QUARTER, -1, GETDATE())
   )
+
   ```
 
