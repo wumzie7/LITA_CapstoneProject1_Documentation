@@ -118,11 +118,6 @@ In this I visualizes
 
 ![SalesData](https://github.com/user-attachments/assets/8dc0c8aa-0e24-46fd-95a9-25184b1bbf2a)
 
-
-![SalesData1](https://github.com/user-attachments/assets/650fc870-e414-49c4-b025-f28afc1ad59a.png)
-
-![Sales](https://github.com/user-attachments/assets/d36dab02-ccb9-4be5-a0c
-c-dd164eddffcc)
-
  ```
+![Sales1](https://github.com/user-attachments/assets/3dc5c734-4eb7-4965-966e-a0efd56c263e)
 
