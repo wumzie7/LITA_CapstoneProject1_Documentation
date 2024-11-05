@@ -120,3 +120,6 @@ In this I visualizes
 
 
 ![SalesData1](https://github.com/user-attachments/assets/650fc870-e414-49c4-b025-f28afc1ad59a.png)
+
+![Sales](https://github.com/user-attachments/assets/d36dab02-ccb9-4be5-a0c
+c-dd164eddffcc)
