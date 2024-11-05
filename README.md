@@ -32,7 +32,25 @@ The primary source of Data used here is Data Sale.csv and this is an open source
 ### Data Cleaning and Preparations
 
 ```
-In the initial phase of the data cleaning and preparations, we perform the following actions;
+In the initial phase of the data cleaning and preparations, I perform the following actions;
 1. Data Loading and Inspection
 2. Handling missing variables
-3. Data cleaning and formatting
+3. Removing duplicates
+4. Data cleaning and formatting
+```
+
+### Exploratory Data Analysis
+
+```
+EDA involved the exploring of the Data to answer some questions about the Data such as;
+- What is the overall sales trend?
+- Which product are top sellers?
+- What are the products on peak sales?
+- What is the total sales by product?
+- What is the total sales by region?
+- What is the total sales by month?
+- What is the average sales per product?
+- What is the total revenue by region?
+- What is the total units of products sold?
+```
+
