@@ -116,5 +116,6 @@ WHERE Product NOT IN (SELECT Product FROM [dbo].[LITASalesData]
 ```
 In this I visualizes
 
+![SalesData](https://github.com/user-attachments/assets/8dc0c8aa-0e24-46fd-95a9-25184b1bbf2a)
 
 
