@@ -2,6 +2,21 @@
 
 ### Project Title: Sales Performance Analysis for a Retail Store 
 
+
+[Project Overview](#project-overview)
+
+[Data Sources](#data-sources)
+
+[Tools Used](#tools-used)
+
+[Data Cleaning and Preparations](#data-leaning-and-preparations)
+
+[Exploratory Data Analysis](#exploratory-data-analysis)
+
+[Data Analysis](#data-analysis)
+
+[Data Visualization](#data-visualization)
+
 ### Project Overview
 
 ```
@@ -51,9 +66,10 @@ EDA involved the exploring of the Data to answer some questions about the Data s
 - What is the total units of products sold?
 ```
 ### Data Analysis
-```
-Microsoft Excel
 
+
+Microsoft Excel
+```
 [LITASalesData_Solution.xlsx](https://github.com/user-attachments/files/17653856/LITASalesData_Solution.xlsx)
 
 ```
