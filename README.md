@@ -51,6 +51,16 @@ EDA involved the exploring of the Data to answer some questions about the Data s
 - What is the total units of products sold?
 ```
 ### Data Analysis
+```
+Microsoft Excel
+
+[LITASalesData_Solution.xlsx](https://github.com/user-attachments/files/17653856/LITASalesData_Solution.xlsx)
+
+```
+
+```
+SQL
+
 This is where we include some basic lines of code or queries during analysis;
 
   ```SQL
@@ -116,6 +126,8 @@ WHERE Product NOT IN (SELECT Product FROM [dbo].[LITASalesData]
 ```Img
 
 ![SalesData](https://github.com/user-attachments/assets/8dc0c8aa-0e24-46fd-95a9-25184b1bbf2a)
+
+![SalesData](https://github.com/user-attachments/assets/1b6810a1-345b-4dc9-b9f4-95e2c9da79dd)
 
  ```
 
