@@ -140,10 +140,9 @@ WHERE Product NOT IN (SELECT Product FROM [dbo].[LITASalesData]
 ### Data Visualization 
 
 ```Img
+https://github.com/wumzie7/LITA_CapstoneProject1_Documentation/blob/main/SalesData.jpg
+https://github.com/wumzie7/LITA_CapstoneProject1_Documentation/blob/main/SalesData.jpg
 
-![SalesData](https://github.com/user-attachments/assets/8dc0c8aa-0e24-46fd-95a9-25184b1bbf2a)
-
-![SalesData](https://github.com/user-attachments/assets/1b6810a1-345b-4dc9-b9f4-95e2c9da79dd)
 
  ```
 
